@@ -1,0 +1,7 @@
+Age,BMI,Glucose,Family_History,Activity,Diabetes
+52,High,High,Yes,Low,Yes
+29,Normal,Normal,Yes,High,No
+61,High,High,Yes,Low,Yes
+34,High,,Yes,,Yes
+27,Normal,Normal,Yes,High,No
+55,High,Normal,Yes,Low,Yes
