@@ -100,7 +100,7 @@ def bayes(data, attrs, decision, indexes):
     print("Bayesian decision:", result)
 
 # Main program
-def main():
+def run_task2():
     data = read_csv("medical_data.csv")
 
     attrs = ["Age", "BMI", "Glucose", "Family_History", "Activity"]
@@ -127,9 +127,9 @@ def main():
     print("Dependency degree:", round(gamma, 4))
 
 if __name__ == "__main__":
-    main()
+    run_task2()
 
-#output
+
 '''
 --- EQUIVALENCE CLASSES ---
 E1: ('52', 'High', 'High', 'Yes', 'Low') -> ['Yes'] CERTAIN
@@ -160,5 +160,4 @@ No ambiguity found.
 --- ROUGH SET RESULTS ---
 Positive region: [1, 2, 3, 4, 5, 6]
 Dependency degree: 1.0
-PS C:\Users\jagde\Documents\KIS\assign_1\KIS> 
 '''
