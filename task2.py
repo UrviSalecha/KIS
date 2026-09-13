@@ -133,31 +133,52 @@ if __name__ == "__main__":
 '''
 --- EQUIVALENCE CLASSES ---
 E1: ('52', 'High', 'High', 'Yes', 'Low') -> ['Yes'] CERTAIN
-E2: ('29', 'Normal', 'Normal', 'Yes', 'High') -> ['No'] CERTAIN
-E3: ('61', 'High', 'High', 'Yes', 'Low') -> ['Yes'] CERTAIN
-E4: ('34', 'High', '', 'Yes', '') -> ['Yes'] CERTAIN
-E5: ('27', 'Normal', 'Normal', 'Yes', 'High') -> ['No'] CERTAIN
-E6: ('55', 'High', 'Normal', 'Yes', 'Low') -> ['Yes'] CERTAIN
+E2: ('52', 'High', 'High', 'Yes', 'High') -> ['No'] CERTAIN
+E3: ('29', 'Normal', 'High', 'Yes', 'High') -> ['Yes'] CERTAIN
+E4: ('29', 'Normal', 'High', 'Yes', 'Low') -> ['No'] CERTAIN
+E5: ('29', 'Normal', 'Normal', 'Yes', 'High') -> ['No'] CERTAIN
+E6: ('52', 'Normal', 'Normal', 'Yes', 'Low') -> ['Yes', 'No'] AMBIGUOUS
+E7: ('29', 'High', 'High', 'Yes', 'Low') -> ['Yes', 'No'] AMBIGUOUS
+E8: ('52', 'High', 'Normal', 'Yes', 'High') -> ['No', 'Yes'] AMBIGUOUS
+E9: ('29', 'Normal', 'Normal', 'Yes', 'Low') -> ['No'] CERTAIN
 
 --- CORE ANALYSIS ---
-Original dependency: 1.0
-Removing Age: dependency = 1.0000
-Age -> DISPENSABLE
-Removing BMI: dependency = 1.0000
-BMI -> DISPENSABLE
-Removing Glucose: dependency = 1.0000
-Glucose -> DISPENSABLE
-Removing Family_History: dependency = 1.0000
+Original dependency: 0.5
+Removing Age: dependency = 0.3333
+Age -> CORE
+Removing BMI: dependency = 0.4167
+BMI -> CORE
+Removing Glucose: dependency = 0.2500
+Glucose -> CORE
+Removing Family_History: dependency = 0.5000
 Family_History -> DISPENSABLE
-Removing Activity: dependency = 1.0000
-Activity -> DISPENSABLE
+Removing Activity: dependency = 0.1667
+Activity -> CORE
 
 --- CORE KNOWLEDGE ---
-Core attributes: []
+Core attributes: ['Age', 'BMI', 'Glucose', 'Activity']
 
-No ambiguity found.
+Ambiguous classes: 3
+
+--- BAYES RESOLUTION ---
+Conditions: ('52', 'Normal', 'Normal', 'Yes', 'Low')
+P(Yes|conditions) = 0.3599
+P(No|conditions) = 0.6401
+Bayesian decision: No
+
+--- BAYES RESOLUTION ---
+Conditions: ('29', 'High', 'High', 'Yes', 'Low')
+P(Yes|conditions) = 0.4837
+P(No|conditions) = 0.5163
+Bayesian decision: No
+
+--- BAYES RESOLUTION ---
+Conditions: ('52', 'High', 'Normal', 'Yes', 'High')
+P(Yes|conditions) = 0.4676
+P(No|conditions) = 0.5324
+Bayesian decision: No
 
 --- ROUGH SET RESULTS ---
-Positive region: [1, 2, 3, 4, 5, 6]
-Dependency degree: 1.0
+Positive region: [1, 2, 3, 4, 5, 12]
+Dependency degree: 0.5
 '''
