@@ -352,3 +352,4 @@ The project is divided into four tasks:
 This project demonstrates how unstructured medical information can be transformed into structured data, analyzed to discover important attributes, resolved when ambiguity occurs, and converted into simple decision rules.
 
 The final output provides an understandable knowledge base that can be used for medical decision analysis.
+**Made by Urvi Salecha and Deepanshi**
